@@ -1,0 +1,106 @@
+table.datatable 
+{ 
+    /*font-size: 140% */
+    /*font-size: 20% */
+}
+
+table.dataTable th,
+table.dataTable td 
+{
+    /*white-space: nowrap;*/
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    /*border-radius: 15px;*/
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.428571429;
+}
+
+.panel-heading{
+	padding: 1px 15px;
+}
+
+#ventana_login{
+    margin-top: 100px;
+}
+
+#ventana_login img{
+    max-width: 138px;
+    width: 100%;
+}
+
+@media (min-width: 500px){
+
+    .panel-body .col-lg-6
+    {
+        width: 50%;
+        display: inline-block;
+        float: left;
+    }
+
+    .col-lg-3 
+    {
+        width: 25%;
+        display: inline-block;
+        float: left;
+    }
+
+    .col-lg-11 
+    {
+        width: 91.66666667%;
+        display: inline-block;
+        float: left;
+    }
+
+    .col-lg-1 
+    {
+        width: 8.33333333%;
+        display: inline-block;
+        float: left;
+    }
+
+    .col-lg-2
+    {
+        min-width: 200px;
+        display: inline-block;
+        float: left;
+    }
+
+    .col-lg-2 img{
+        max-width: 68px;
+        width: 100%;
+    }
+
+    .col-lg-12
+    {
+        width: 100%;
+        display: inline-block;
+        float: left;
+    }
+
+}
+
+@media (max-width: 1200px){
+
+    .panel-body .tab-content .col-lg-6
+    {
+        width: auto;
+        display: inline-block;
+        float: left;
+    }
+
+}
+
+@media (max-width: 900px){
+
+    #entorno_estudiosLabRef .col-sm-6
+    {
+        width: 60%;
+    } 
+}
+
+}
