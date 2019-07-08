@@ -3,6 +3,11 @@
 ## Estructura de un proyecto
 
 ### Contexto
+Para entender mejor por qué te estoy compartiendo esta estructura tan básica, te recomiendo leer:
+
+- [Consejos para aprender a programar desde cero](https://anabelisa.co/untitled-consejos-para-aprender-a-programar-desde-cero/)
+- [POO con PHP sin framework](https://anabelisa.co/poo-con-php-sin-framework/)
+
 Este proyecto es un pequeño formulario que guarda usuarios en una base de datos en postgresql. 
 Pero nos vamos a enfocar es en el flujo de trabajo de estos archivos.
 
@@ -32,6 +37,7 @@ En las otras carpetas o directorios tenemos paquetes externos que usamos como ut
 Igualmente dentro de webroot están los demás complementos para bootstrap, jQuery, fuentes y css que se utiliza en el front.
 
 ### Lo que DEBES mejorar
-- TODO debería estar en inglés
-- Usa camelCase para los nombres de las clases, funciones y variables
-- Importantísima tener la identación bajo control
+- TODO debería estar en inglés.
+- Usa camelCase para los nombres de las funciones y variables.
+- Usa PascalCase para los nombres de las clases.
+- Importantísima tener la identación bajo control.
