@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<parametros>
+	<conexion>
+		<servidor>localhost</servidor>
+		<puerto>5432</puerto>
+		<db>my_database</db>
+		<usuario>postgres</usuario>
+		<contrasena>123</contrasena>
+	</conexion>
+</parametros>
