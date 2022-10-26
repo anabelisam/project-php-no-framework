@@ -1,8 +1,5 @@
 ## Estructura de un proyecto con PHP sin framework
 
-## Estructura de un proyecto
-
-### Contexto
 Para entender mejor por qué te estoy compartiendo esta estructura te recomiendo leer:
 
 - [Estructura de un proyecto en PHP sin framework](https://anabelisa.co/poo-con-php-sin-framework/)
