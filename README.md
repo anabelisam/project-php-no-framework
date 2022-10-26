@@ -1,15 +1,13 @@
-## POO con PHP sin framework
+## Estructura de un proyecto con PHP sin framework
 
 ## Estructura de un proyecto
 
 ### Contexto
-Para entender mejor por qué te estoy compartiendo esta estructura tan básica, te recomiendo leer:
+Para entender mejor por qué te estoy compartiendo esta estructura te recomiendo leer:
 
-- [Consejos para aprender a programar desde cero](https://anabelisa.co/untitled-consejos-para-aprender-a-programar-desde-cero/)
-- [POO con PHP sin framework](https://anabelisa.co/poo-con-php-sin-framework/)
+- [Estructura de un proyecto en PHP sin framework](https://anabelisa.co/poo-con-php-sin-framework/)
 
-Este proyecto es un pequeño formulario que guarda usuarios en una base de datos en postgresql. 
-Pero nos vamos a enfocar es en el flujo de trabajo de estos archivos.
+Este proyecto es un formulario que guarda usuarios en una base de datos en postgresql. No nos enfocaremos en diseño, ni en vistas, aquí lo importante es que analices la estructura de los archivos y el flujo de trabajo entre ellos.
 
 ### De la vista HTML al control de JS
 En la carpeta de vistas tenemos solo las maquetas visuales de la aplicación, estas solo tienen la importación del archivo .js (además de los css) que se encargará de interactuar con la siguiente parte de la aplicación como son los datos, los eventos, etc.
@@ -36,8 +34,10 @@ En las otras carpetas o directorios tenemos paquetes externos que usamos como ut
 
 Igualmente dentro de webroot están los demás complementos para bootstrap, jQuery, fuentes y css que se utiliza en el front.
 
-### Lo que DEBES mejorar
+### Lo que puedes mejorar de aquí:
 - TODO debería estar en inglés.
 - Usa camelCase para los nombres de las funciones y variables.
 - Usa PascalCase para los nombres de las clases.
 - Importantísima tener la identación bajo control.
+
+Envíame un PR con tus cambios sugeridos y me encantará hacerte parte de esto 💜
