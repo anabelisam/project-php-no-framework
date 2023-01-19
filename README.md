@@ -1,40 +1,52 @@
-## Estructura de un proyecto con PHP sin framework
+# About this template
 
-Para entender mejor por qué te estoy compartiendo esta estructura te recomiendo leer:
+## PHP Project File Structure without framework
 
-- [Estructura de un proyecto en PHP sin framework](https://anabelisa.co/poo-con-php-sin-framework/)
+To better understand WHY I share this file structure, I encourage you to read:
 
-Este proyecto es un formulario que guarda usuarios en una base de datos en postgresql. No nos enfocaremos en diseño, ni en vistas, aquí lo importante es que analices la estructura de los archivos y el flujo de trabajo entre ellos.
+- [PHP Project File Structure without framework](https://anabelisa.co/estructura-proyecto-php-sin-framework/)
 
-### De la vista HTML al control de JS
-En la carpeta de vistas tenemos solo las maquetas visuales de la aplicación, estas solo tienen la importación del archivo .js (además de los css) que se encargará de interactuar con la siguiente parte de la aplicación como son los datos, los eventos, etc.
-El en el .js que en realidad es Jquery, tenemos entre otras cosas, las peticiones al servidor (en este caso estamos usando Ajax) y recibe las respuestas para ponerlas en nuestras maquetas. 
+This project is a form that inserts users into a PostgreSQL database. The focus of the project isn't on design, nor on views; the aim is to understand the file structure and the workflow between files.
 
-Pero esta petición sólo envía parámetros y una palabra clave que indica qué le estamos pidiendo al back y lo hemos bautizado como la “acción”.
+### From HTML view to JS control
 
-### Un puente entre JS y PHP
-Esta acción es recibida por un script llamado enlace_algo.php dentro de la carpeta enlaces y este lo que hace es recibir esos parámetros, la acción que necesita y pasárselos a un controlador donde va a estar realmente la lógica del negocio, donde se va a organizar la información de acuerdo a lo que queremos que haga.
+The `views` directory only contains views templates for the application, these files only have the import of the JS file (besides CSS files) in charge of interacting with the following part of the application: data, events, etc.
+The JS file, in fact jQuery, makes requests to the server (in this case using AJAX) and receives the responses (data from the server) to use them in the view templates.
 
-### La lógica de negocio va aparte
-Dentro de este controlador, cuando ya hemos dado la forma de lo que queremos a los datos recibidos, se lo pasamos como última instancia a un archivo llamado trans_algo.php quien es realmente el que va a hacer el insert, el update o el delete de lo que le estemos mandando.
-Retornamos el resultado de la transacción final, lo procesamos en el controlador, se lo devolvemos al enlace y este ya lo pasa al front listo para mostrarse.
+This request only sends parameters and a keyword that indicates what is requested to the back end and is referred to as the "action".
 
-### Evitando repeticiones innecesarias
-Dentro de la carpeta de transacciones tenemos un par de carpetas llamados “genéricas” y “conexión”
+### A bridge between JS and PHP
 
-*Genéricas:* Tenemos un archivo que hace las consultas y nos las devuelve de acuerdo a lo que necesitemos de manera genérica para luego procesar de manera específica.
+This action is received by a script named bridge_something.php inside the `bridges` directory, this script receives those parameters, the action requested and pass them to a controller where the business logic is contained, where the data will be organized according to what you want it to do.
 
-*Conexión:* Aquí es donde tenemos realmente el archivo de conexión que lee los parámetros del .xml que guardamos en config.
+### Business logic is separate
 
-### Y todo lo demás también va aparte 
-En las otras carpetas o directorios tenemos paquetes externos que usamos como utilidades o extensiones de nuestra aplicación como pdf para generar los archivos en pdf o XMLTools para hacer la lectura de nuestro .xml con un script php.
+Within this controller, when the data is already formatted as desired, it is passed to the file named `trans_something.php` who is really the one that do the insert, the update or the delete of what is sent.
 
-Igualmente dentro de webroot están los demás complementos para bootstrap, jQuery, fuentes y css que se utiliza en el front.
+The result of the final transaction is returned, then processed in the controller, finally returned to the bridge who passes it to the front end ready to be displayed.
 
-### Lo que puedes mejorar de aquí:
-- TODO debería estar en inglés.
-- Usa camelCase para los nombres de las funciones y variables.
-- Usa PascalCase para los nombres de las clases.
-- Importantísima tener la identación bajo control.
+### Avoiding unnecessary repetitions
 
-Envíame un PR con tus cambios sugeridos y me encantará hacerte parte de esto 💜
+The `transactions` directory contains the directories named `generic` and `connection`
+
+*Generic:* Holds a file that makes the queries to the database and returns the results in a generic way, to lately process them in a specific way.
+
+*Connection:* Here is where is stored the connection that read the parameters from .xml file saved in config.
+
+### Everything else is also separate
+
+The other directories contain external packages used as utilities or extensions of our application, as PDF to generate PDF files or XMLTools to read the .xml with a PHP script.
+
+Likewise inside `webroot` are the other plugins for bootstrap, jQuery, Fonts and CSS used in the front end.
+
+### Improvements you can do
+
+- [ ] Translate: EVERYTHING should be in English.
+
+- [ ] Use of camelCase for function names and variables names.
+
+- [ ] Use of PascalCase for classes names
+
+- [ ] It is crucial to have indentation under control.
+
+Send me a PR with your suggested changes, I'd love making you part of this 💜
